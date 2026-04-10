@@ -46,7 +46,7 @@ function HomePage() {
     setPage(0);
   }
 
-  const activeCategoryHandler = (categoryId: string) => {
+  const activeCategoryHandler = (categoryId: number) => {
     setActiveCategoryId(categoryId);
     setPage(0);
   }
@@ -84,7 +84,7 @@ function HomePage() {
     {categories.map(category =>
         <button 
         style={activeCategoryId === category.id ? {fontWeight: "bold"}: undefined}
-        onClick={() => activeCategoryHandler(number(category.id))}>{category.name}
+        onClick={() => activeCategoryHandler(Number(category.id))}>{category.name}
         </button>
     )}
 
